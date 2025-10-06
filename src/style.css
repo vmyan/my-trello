@@ -1,0 +1,152 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  background-color: #31b0b9;
+}
+
+#board {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.column {
+  background-color: #ebecf0;
+  padding: 8px;
+  width: 250px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.column h3 {
+  margin: 0 0 8px 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Карточки */
+.card {
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card:hover .delete-card {
+  opacity: 1;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 6px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-card {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.delete-card:hover {
+  color: #ff5b5b;
+}
+
+/* Кнопка добавления */
+.add-card {
+  background-color: transparent;
+  border: none;
+  color: #5e6c84;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.add-card:hover {
+  background-color: rgba(9, 30, 66, 0.08);
+}
+
+/* Новый инлайн редактор */
+.new-card-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.new-card-input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 10px 0;
+}
+
+.new-card-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.new-card-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.new-card-buttons button {
+  padding: 4px 8px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-card {
+      border-radius: 20px;
+    background-color: #56ca75;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.cancel-card {
+    border-radius: 20px;
+    background-color: #ed4656;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+}
